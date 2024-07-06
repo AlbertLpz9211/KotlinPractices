@@ -1,4 +1,4 @@
-package com.example.applicacionestudio
+package com.example.applicacionestudio.sintaxis
 
 fun main() {
     var  name:String? = null

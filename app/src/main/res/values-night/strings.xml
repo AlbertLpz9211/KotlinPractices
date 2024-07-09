@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ApplicacionEstudio</string>
-    <string name="male">Hombre</string>
-    <string name="female">Female</string>
     <string name="heigth">Altura</string>
     <string name="weight">peso</string>
     <string name="age">Edad</string>

@@ -4,4 +4,16 @@
     <string name="weight">peso</string>
     <string name="age">Edad</string>
     <string name="calculate">calcular</string>
+    <string name="result">resultado</string>
+    <string name="recalculate">recalcular</string>
+    <string name="error">error</string>
+    <string name="low_weigth">Bajo Peso</string>
+    <string name="low_weigth_description">estas por debajo de tu peeso optimo</string>
+    <string name="normal_weigth">Peso Normal</string>
+    <string name="normal_weigth_description">sobre Peso</string>
+    <string name="OverWeigth">Obesidad</string>
+    <string name="over_weigth_description">estas elevado de peso</string>
+    <string name="overweigth">sobre peso</string>
+    <string name="obese">obeso</string>
+    <string name="obese_description">estas obeso!</string>
 </resources>

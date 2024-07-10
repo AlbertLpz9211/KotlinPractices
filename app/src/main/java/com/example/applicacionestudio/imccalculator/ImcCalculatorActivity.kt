@@ -1,5 +1,6 @@
 package com.example.applicacionestudio.imccalculator
 
+import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Build
 import android.os.Bundle
@@ -33,6 +34,10 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private lateinit var tvAge: TextView
     private  lateinit var tvWeight: TextView
     private lateinit var btnCalculate: Button
+
+    companion object{
+        const val IMC_KEY= "IMC_RESULT"
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,19 +99,30 @@ class ImcCalculatorActivity : AppCompatActivity() {
             setAge()
         }
         btnCalculate.setOnClickListener {
-            calculateImc()
+            val result= calculateImc()
+            navigateToResult(result)
         }
 
     }
 
-    private fun calculateImc() {
-        val imc = currentWeigth/(currHeight * currHeight)
-        Log.i ("calculateIMC", "el IMC es: $imc")
+    private fun navigateToResult(result: Double) {
+
+        val intent = Intent(this, ResultImcactivity::class.java)
+        intent.putExtra(IMC_KEY, result)
+        startActivity(intent)
+    }
+
+
+    private fun calculateImc(): Double {
+        val df = DecimalFormat("#.##")
+        val imc = currentWeigth/(currHeight.toDouble()/100 * currHeight.toDouble()/100)
+        return df.format(imc).toDouble()
     }
 
     private fun setAge(){
         tvAge.text = currAge.toString()
     }
+
 
     private fun setWeigth(){
         tvWeight.text = currentWeigth.toString()
@@ -137,6 +153,11 @@ class ImcCalculatorActivity : AppCompatActivity() {
         setGenderColor()
         setWeigth()
         setAge()
+        setHeigth()
+    }
+
+    private fun setHeigth() {
+        tvHeigth.text = currHeight.toString()
     }
 
 }

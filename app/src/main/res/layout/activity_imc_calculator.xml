@@ -151,6 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/weight"
+                android:textAllCaps="true"
                 android:textColor="@color/white"
                 tools:text="Peso" />
 
@@ -162,30 +163,31 @@
                 tools:text="15 KG" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:paddingTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnSubstracWeigth"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
                     android:backgroundTint="@color/btnCtrl"
-                    app:tint="@color/white"
-                    app:borderWidth="0dp"
                     android:src="@drawable/ic_substrac"
-                    android:layout_height="wrap_content" />
+                    app:borderWidth="0dp"
+                    app:tint="@color/white" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnAddWeigth"
                     android:layout_width="wrap_content"
-                    app:tint="@color/white"
-                    app:borderWidth="0dp"
-                    android:backgroundTint="@color/btnCtrl"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@color/btnCtrl"
                     android:src="@drawable/ic_add"
-                    android:layout_marginStart="16dp" />
+                    app:borderWidth="0dp"
+                    app:tint="@color/white" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -215,6 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/age"
+                android:textAllCaps="true"
                 android:textColor="@color/white"
                 tools:text="Edad" />
 
@@ -224,31 +227,32 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 tools:text="15 años" />
+
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:paddingTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnSubstracAge"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:backgroundTint="@color/btnCtrl"
-                    app:tint="@color/white"
-                    app:borderWidth="0dp"
                     android:src="@drawable/ic_substrac"
-                    android:layout_height="wrap_content" />
+                    app:borderWidth="0dp"
+                    app:tint="@color/white" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnAddAge"
                     android:layout_width="wrap_content"
-                    app:tint="@color/white"
-                    app:borderWidth="0dp"
-                    android:backgroundTint="@color/btnCtrl"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@color/btnCtrl"
                     android:src="@drawable/ic_add"
-                    android:layout_marginStart="16dp" />
+                    app:borderWidth="0dp"
+                    app:tint="@color/white" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -256,6 +260,20 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/purple_700"
+        android:text="@string/calculate"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/calculate" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

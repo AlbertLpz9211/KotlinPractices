@@ -32,11 +32,11 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private lateinit var btnAddAge: FloatingActionButton
     private lateinit var btnSubstracAge: FloatingActionButton
     private lateinit var tvAge: TextView
-    private  lateinit var tvWeight: TextView
+    private lateinit var tvWeight: TextView
     private lateinit var btnCalculate: Button
 
-    companion object{
-        const val IMC_KEY= "IMC_RESULT"
+    companion object {
+        const val IMC_KEY = "IMC_RESULT"
     }
 
 
@@ -95,11 +95,11 @@ class ImcCalculatorActivity : AppCompatActivity() {
             setAge()
         }
         btnSubstracAge.setOnClickListener {
-            currAge -=1
+            currAge -= 1
             setAge()
         }
         btnCalculate.setOnClickListener {
-            val result= calculateImc()
+            val result = calculateImc()
             navigateToResult(result)
         }
 
@@ -113,18 +113,20 @@ class ImcCalculatorActivity : AppCompatActivity() {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun calculateImc(): Double {
         val df = DecimalFormat("#.##")
-        val imc = currentWeigth/(currHeight.toDouble()/100 * currHeight.toDouble()/100)
+        val imc = currentWeigth / (currHeight.toDouble() / 100 * currHeight.toDouble() / 100)
         return df.format(imc).toDouble()
+        Log.i("calculateImc", "el resultado es: $imc")
     }
 
-    private fun setAge(){
+    private fun setAge() {
         tvAge.text = currAge.toString()
     }
 
 
-    private fun setWeigth(){
+    private fun setWeigth() {
         tvWeight.text = currentWeigth.toString()
     }
 

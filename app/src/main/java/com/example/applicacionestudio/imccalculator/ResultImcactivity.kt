@@ -1,6 +1,7 @@
 package com.example.applicacionestudio.imccalculator
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ class ResultImcactivity : AppCompatActivity() {
     private lateinit var tvResult: TextView
     private lateinit var tvImc: TextView
     private lateinit var tvDescription: TextView
+    private lateinit var btnReCalculate: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,11 @@ class ResultImcactivity : AppCompatActivity() {
 
         initComponents()
         initUI(result)
+        initListeners()
+    }
+
+    private fun initListeners() {
+        btnReCalculate.setOnClickListener { onBackPressed() }
     }
 
     private fun initUI(result: Double) {
@@ -34,19 +41,19 @@ class ResultImcactivity : AppCompatActivity() {
                 tvDescription.text = getString(R.string.low_weigth_description)
             }
 
-            in 0.00..18.50 -> {
+            in 18.51..24.99 -> {
                 //peso normal
                 tvResult.text = getString(R.string.normal_weigth)
                 tvDescription.text = getString(R.string.normal_weigth_description)
             }
 
-            in 0.00..18.50 -> {
+            in 25.00..29.99 -> {
                 //sobrepeso
                 tvResult.text = getString(R.string.overweigth)
                 tvDescription.text = getString(R.string.over_weigth_description)
             }
 
-            in 0.00..18.50 -> {
+            in 30.00..99.00 -> {
                 //obesidad
                 tvResult.text = getString(R.string.obese)
                 tvDescription.text = getString(R.string.obese_description)
@@ -61,9 +68,12 @@ class ResultImcactivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun initComponents() {
         tvResult = findViewById(R.id.tvResult)
         tvDescription = findViewById(R.id.tvDescription)
         tvImc = findViewById(R.id.tvImc)
+        btnReCalculate = findViewById(R.id.btnReCalculate)
     }
 }

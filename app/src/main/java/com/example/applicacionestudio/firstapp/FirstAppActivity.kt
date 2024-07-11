@@ -21,7 +21,6 @@ class FirstAppActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first_app)
             val btnStart= findViewById<AppCompatButton>(R.id.btnAction)
             val edtext = findViewById<AppCompatEditText>(R.id.etNombre)
-
          btnStart.setOnClickListener{
              val name = edtext.text.toString()
              if(name.isNotEmpty()){

@@ -16,4 +16,7 @@
     <string name="overweigth">sobre peso</string>
     <string name="obese">obeso</string>
     <string name="obese_description">estas obeso!</string>
+    <string name="todo_title">hola</string>
+    <string name="todo_categories">categorias</string>
+    <string name="todo_task">Tareas</string>
 </resources>

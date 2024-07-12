@@ -1,46 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainTodo"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/todo_background_app"
-    android:orientation="vertical"
-    tools:context=".todo.TodoActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginVertical="44dp"
-        android:text="@string/todo_title"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="35sp" />
-
-    <TextView
-        style="@style/TodoSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="32dp"
-        android:text="@string/todo_categories" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTodoCategories"
+    <LinearLayout
+        android:id="@+id/mainTodo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:background="@color/todo_background_app"
+        android:orientation="vertical"
+        tools:context=".todo.TodoActivity">
 
-    <TextView
-        style="@style/TodoSubtitle"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="44dp"
+            android:text="@string/todo_title"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <TextView
+            style="@style/TodoSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:text="@string/todo_categories" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTodoCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/TodoSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/todo_task" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTodoTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/todo_task" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTodoTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-</LinearLayout>
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/todo_accent"
+        app:fabSize="normal"
+        android:layout_gravity="end|bottom"
+        app:tint="@color/white"/>
+</FrameLayout>

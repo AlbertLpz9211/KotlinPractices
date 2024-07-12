@@ -19,4 +19,7 @@
     <string name="todo_title">hola</string>
     <string name="todo_categories">categorias</string>
     <string name="todo_task">Tareas</string>
+    <string name="todo_personal">Personal</string>
+    <string name="todo_others">Otros</string>
+    <string name="create_task">crear tarea</string>
 </resources>

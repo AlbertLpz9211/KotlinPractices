@@ -13,9 +13,12 @@
         android:theme="@style/Theme.ApplicacionEstudio"
         tools:targetApi="31">
         <activity
-            android:name=".todo.TodoActivity"
-            android:theme="@style/Theme.TodoApp"
+            android:name=".appjsonconsumer.SuperHeroListActivity"
             android:exported="false" />
+        <activity
+            android:name=".todo.TodoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TodoApp" />
         <activity
             android:name=".imccalculator.ResultImcactivity"
             android:exported="false" />

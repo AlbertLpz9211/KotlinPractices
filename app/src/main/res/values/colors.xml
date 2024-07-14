@@ -25,4 +25,7 @@
     <color name="todo_business_category">#FF9800</color>
     <color name="todo_personal_category">#00BCD4</color>
     <color name="todo_other_category">#4CAF50</color>
+
+<!--    superhero App-->
+    <color name="superhero_item_name">#79112385</color>
 </resources>
